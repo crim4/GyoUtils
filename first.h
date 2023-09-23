@@ -229,7 +229,7 @@ void print2(Types... others) {
 #define ASSERT_BOUNDS(var, min_val, max_val)
 #else
 
-void print_tab_if_there_is_a_message(const char* msg) { printsl("    "); }
+void print_tab_if_there_is_a_message(const char* msg) { (void)msg; printsl("    "); }
 void print_tab_if_there_is_a_message() { }
 
 #define ASSERT(expr, message, ...) \
